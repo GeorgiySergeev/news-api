@@ -11,7 +11,7 @@ navBar.addEventListener('click', onLinkClik);
 
 function onLinkClik(e) {
   console.log(e.target.textContent);
-  gallery.innerHTML = ""
+  gallery.innerHTML = '';
 
   const query = e.target.textContent;
   fatchArticles(query).then(data => {
