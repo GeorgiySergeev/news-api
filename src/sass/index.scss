@@ -1,2 +1,69 @@
 @import './common';
-@import './example';
+@import './main';
+// Variable overrides first
+$primary: #900;
+$enable-shadows: true;
+$prefix: "mo-";
+
+// Then import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+//=======================================
+body{
+    background-color: rgb(9, 99, 69);
+    font-family: 'Roboto';
+    color: rgb(53, 50, 50);
+}
+.container{
+    width: 1440px ;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    //outline: 1px solid  #900;
+}
+.header{
+    //background-color: #0F66C2;
+}
+.logo-title{
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+
+
+
+
+.article-card{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+    padding-bottom: 50px;
+   
+
+}
+.card-item-text-wrapper{
+    margin-bottom: 50xp;
+}
+.card-item{
+    border-radius: 5px;
+    border:1px solid black;
+    height: 500px;
+
+
+}
+.card-item-body{
+    padding: 5px;
+    display: flex;
+    flex-direction:column;
+    
+}
+.author{
+    margin-top: auto;
+}
+
+
+// ====================
+
