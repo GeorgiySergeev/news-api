@@ -57,14 +57,14 @@ async function fatchArticles(searchQuery, page) {
     page: `${page}`,
     language: 'en',
   };
-
-  try {
-    const response = await axios.get('', { params });
-    const articlesData = response.data;
-    console.log(articlesData);
-    return articlesData;
-  } catch (error) {
-    console.log(error.message);
-  }
+  const response = await axios.get('', { params });
+  const articlesData = response.data;
+  console.log(articlesData);
+  return articlesData;
+//   try {
+    
+//   } catch (error) {
+//     console.log(error.message);
+//   }
 }
-fatchArticles('sport');
+
