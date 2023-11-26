@@ -1,5 +1,4 @@
 import axios from 'axios';
-console.log('test');
 
 axios.defaults.baseURL = 'https://newsapi.org/v2/everything';
 
@@ -15,6 +14,7 @@ function onLinkClik(e) {
 
   const query = e.target.textContent;
   fatchArticles(query).then(data => {
+    console.log(data);
     const arrayOfArticles = data.articles;
     console.log(arrayOfArticles);
     createThumbnailMarkUp(arrayOfArticles);
@@ -48,7 +48,7 @@ function createThumbnailMarkUp(arr) {
   });
   return gallery.insertAdjacentHTML('beforeend', markup.join(''));
 }
-
+//================API
 async function fatchArticles(searchQuery, page) {
   const params = {
     apiKey: 'dcce7845e2254ee59f37860fb5526946',
@@ -57,14 +57,13 @@ async function fatchArticles(searchQuery, page) {
     page: `${page}`,
     language: 'en',
   };
-  const response = await axios.get('', { params });
-  const articlesData = response.data;
-  console.log(articlesData);
-  return articlesData;
-//   try {
-    
-//   } catch (error) {
-//     console.log(error.message);
-//   }
-}
 
+  try {
+    const response = await axios.get('', { params });
+    const articlesData = response.data;
+    console.log(articlesData);
+    return articlesData;
+  } catch (error) {
+    console.log(error.message);
+  }
+}
